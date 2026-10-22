@@ -1,0 +1,8 @@
+### 自定义 ###
+node_modules/
+.deploy*/
+package-lock.json
+yarn.lock
+.env
+.env.local
+.vercel

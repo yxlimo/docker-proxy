@@ -1,0 +1,12 @@
+{
+    "name": "docker-proxy",
+    "version": "1.0.0",
+    "description": "Docker Hub 镜像仓库代理服务",
+    "main": "api/docker.js",
+    "scripts": {
+        "test": "node --test"
+    },
+    "dependencies": {
+        "axios": "^1.6.7"
+    }
+}

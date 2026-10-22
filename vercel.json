@@ -1,0 +1,20 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "version": 2,
+    "regions": ["iad1"],
+    "trailingSlash": false,
+    "rewrites": [
+        {
+            "source": "/v2",
+            "destination": "/api/docker.js"
+        },
+        {
+            "source": "/v2/:path*",
+            "destination": "/api/docker.js"
+        },
+        {
+            "source": "/health",
+            "destination": "/api/docker.js"
+        }
+    ]
+}
