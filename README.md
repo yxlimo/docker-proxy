@@ -3,6 +3,24 @@
 用 Vercel 代理 Docker Hub 镜像仓库，让国内客户端不再直连被 TLS 层阻断的
 `registry-1.docker.io`。客户端无需 `docker login`。
 
+## 状态：无限期搁置
+
+代码已就绪（测试通过，已推送 GitHub），但**从未部署**——没有 Vercel 项目、
+没有域名、没有配置凭据。搁置期间不做任何推进。
+
+恢复时需要：
+
+```bash
+cd vercel-projects/docker-proxy
+vercel --yes --scope correct1 --prod
+vercel git connect --scope correct1 --yes
+```
+
+再配环境变量 `DOCKERHUB_USERNAME` / `DOCKERHUB_TOKEN`（只读权限的 PAT 即可）、
+绑定自定义域名、设 WAF 访问控制。
+
+部署步骤见下方「部署」章节，实现细节见 `docs/`。
+
 ## 功能
 
 | 能力 | 说明 |
